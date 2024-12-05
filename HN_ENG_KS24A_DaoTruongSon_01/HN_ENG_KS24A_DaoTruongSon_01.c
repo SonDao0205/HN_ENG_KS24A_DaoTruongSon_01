@@ -81,7 +81,7 @@ int main(){
         case 6:
             printf("Nhap vi tri ban muon xoa trong mang : ");
             scanf("%d",&index);
-            for (int i = index; i < current_lenght; i++)
+            for (int i = index-1; i < current_lenght; i++)
             {
                 arr[i] = arr[i+1];
             }

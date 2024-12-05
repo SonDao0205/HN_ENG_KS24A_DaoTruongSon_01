@@ -1,13 +1,14 @@
 #include<stdio.h>
 #include<math.h>
 int main(){
-    int arr[100];
-    int count[100];
-    int choice, current_lenght,max,min,sum,value,index,k,prime,check;
+    int arr[1000];
+    int count[1000];
+    int choice, current_lenght = 0,max,min,sum,value,index,k,prime,check;
     do
     {
-        printf("-----------------------------------------------------------\n");
+        printf("____________________________________________________________\n");
         printf("                            Menu                        \n");
+        printf("____________________________________________________________\n");
         printf("1. Nhap so phan tu va gia tri cho mang.\n");
         printf("2. In ra cac gia tri trong mang.\n");
         printf("3. Tim gia tri nho nhat va lon nhat trong mang.\n");
@@ -19,10 +20,10 @@ int main(){
         printf("9. In ra toan bo so nguyen to trong mang.\n");
         printf("10. Sap xep mang theo thu tu tang dan.\n");
         printf("11. Thoat.\n");
-        printf("-----------------------------------------------------------\n");
+        printf("____________________________________________________________\n");
         printf("Nhap lua chon cua ban : ");
         scanf("%d",&choice);
-        printf("-----------------------------------------------------------\n");
+        printf("____________________________________________________________\n");
         switch (choice)
         {
         case 1:
@@ -35,6 +36,11 @@ int main(){
             }
             break;
         case 2:
+            if (current_lenght == 0)
+            {
+                printf("Hay nhap mang truoc!\n");
+                break;
+            }
             printf("Cac gia tri hien co trong mang : \n");
             for (int i = 0; i < current_lenght; i++)
             {
@@ -42,6 +48,11 @@ int main(){
             }
             break;
         case 3:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             max = arr[0];
             min = arr[0];
             for (int i = 0; i < current_lenght; i++)
@@ -61,6 +72,11 @@ int main(){
             printf("Gia tri lon nhat trong mang : %d\nGia tri nho nhat trong mang : %d\n",max,min);
             break;
         case 4:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             sum = 0;
             for (int i = 0; i < current_lenght; i++)
             {
@@ -69,6 +85,11 @@ int main(){
             printf("Tong cua cac phan tu trong mang : %d\n",sum);
             break;
         case 5:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             printf("Nhap gia tri ban muon them : ");
             scanf("%d",&value);
             arr[current_lenght++] = value;
@@ -79,6 +100,11 @@ int main(){
             }
             break;
         case 6:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             printf("Nhap vi tri ban muon xoa trong mang : ");
             scanf("%d",&index);
             for (int i = index-1; i < current_lenght; i++)
@@ -93,6 +119,11 @@ int main(){
             }
             break;
         case 7:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             for (int i = 0; i < current_lenght; i++)
             {
                 for (int j = 0; j < current_lenght - i - 1; j++)
@@ -112,6 +143,11 @@ int main(){
             }
             break;
         case 8:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             k = 0;
             printf("Nhap phan tu muon tim : ");
             scanf("%d",&value);
@@ -135,6 +171,11 @@ int main(){
             }
             break;
         case 9:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             check = 0;
             for (int i = 0; i < current_lenght; i++)
             {
@@ -165,6 +206,11 @@ int main(){
             }
             break;
         case 10:
+            if (current_lenght == 0)
+                {
+                    printf("Hay nhap mang truoc!\n");
+                    break;
+                }
             for (int i = 0; i < current_lenght; i++)
                 {
                     int minIndex = i;
